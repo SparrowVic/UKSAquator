@@ -117,7 +117,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Images\aquator-logo-v2.png" />
+    <Content Include="Content\Images\aquator-logo-v3.png" />
+    <Content Include="Content\Images\aquator-logo.png" />
+    <Content Include="Content\Images\facebook.png" />
+    <Content Include="Content\Site-prototype.css" />
+    <Content Include="Content\Videos\Underwater - 5385.mp4" />
     <Content Include="Global.asax" />
+    <Content Include="Prototype\Main.html" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Web.config" />
@@ -145,6 +152,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
+    <Folder Include="Infrastructure\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
