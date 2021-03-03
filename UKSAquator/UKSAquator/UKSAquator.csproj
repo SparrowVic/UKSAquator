@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -117,12 +118,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\Images\148936.jpg" />
+    <Content Include="Content\Images\54610700-panoramic-view-of-man-swim-in-a-swimming-pool-with-copyspace.jpg" />
     <Content Include="Content\Images\aquator-logo-v2.png" />
     <Content Include="Content\Images\aquator-logo-v3.png" />
     <Content Include="Content\Images\aquator-logo.png" />
+    <Content Include="Content\Images\cristian-palmer-XexawgzYOBc-unsplash.jpg" />
+    <Content Include="Content\Images\example-face.png" />
+    <Content Include="Content\Images\face2.jpg" />
+    <Content Include="Content\Images\face3.jpg" />
     <Content Include="Content\Images\facebook.png" />
+    <Content Include="Content\Images\img1.jpg" />
+    <Content Include="Content\Images\img2.jpg" />
+    <Content Include="Content\Images\jason-leung-kIPG5OyGbWk-unsplash.jpg" />
+    <Content Include="Content\Images\jong-marshes-79mNMAvSORg-unsplash.jpg" />
+    <Content Include="Content\Images\marko-blazevic-4ibyBpL6bBA-unsplash.jpg" />
+    <Content Include="Content\Images\team.jpg" />
     <Content Include="Content\Site-prototype.css" />
     <Content Include="Content\Videos\Underwater - 5385.mp4" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
     <Content Include="Prototype\Main.html" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
@@ -142,6 +158,11 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
