@@ -1,4 +1,7 @@
-﻿
+﻿@model UKSAquator.ViewModels.HomeViewModel
+@*@model UKSAquator.Models.Gallery*@
+
+
 @{
     ViewBag.Title = "Gallery";
     Layout = "~/Views/Shared/_SportsClubLayout.cshtml";
@@ -8,14 +11,21 @@
 
 <main>
     <div class="gallery-container">
+
+
+
         <div class="event-gallery">
-            <div>Date</div>
-            <div>Title</div>
-            <div class="event-description">Event description</div>
-            <div class="event-gallery-images">
-                Gallery
-            </div>
-            <div class="event-gallery-border">Event gallery border</div>
+            @foreach (var gal in Model.Galleries)
+            {
+                <div class="gallery__item">
+                    <div class="embed">
+                        <img src="../Content/Images/team/@gal.GalleryFileName" />
+                    </div>
+                </div>
+            }
         </div>
+
+
+
     </div>
 </main>

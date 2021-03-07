@@ -16,10 +16,11 @@ namespace UKSAquator.DAL
 
         static NewsContext()
         {
-            //Database.SetInitializer<NewsContext>(new NewsInitializer());
+            Database.SetInitializer<NewsContext>(new NewsInitializer());
         }
 
         public DbSet<News> DbNews { get; set; }
+        public virtual DbSet<Gallery> DbGallery { get; set; }
 
     }
 }

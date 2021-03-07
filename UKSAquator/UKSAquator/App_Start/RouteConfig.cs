@@ -27,7 +27,7 @@ namespace UKSAquator
 
             routes.MapRoute(
                 name: "Gallery",
-                url: "galeria",
+                url: "galeria-{id}.html",
                 defaults: new { controller = "Home", action = "Gallery" }
             );
 

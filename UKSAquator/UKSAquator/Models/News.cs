@@ -17,5 +17,7 @@ namespace UKSAquator.Models
         public DateTime PublicationDate { get; set; }
         public string CoverFileName { get; set; }
         public bool IsHidden { get; set; }
+
+        public virtual ICollection<Gallery> Galleries { get; set; }
     }
 }

@@ -13,6 +13,7 @@ namespace UKSAquator.DAL
         protected override void Seed(NewsContext context)
         {
             SeedNewsData(context);
+            SeedGalleryData(context);
 
             base.Seed(context);
         }
@@ -33,6 +34,78 @@ namespace UKSAquator.DAL
             };
 
             news.ForEach(g => context.DbNews.Add(g));
+            context.SaveChanges();
+        }
+
+        private void SeedGalleryData(NewsContext context)
+        {
+            var gallery = new List<Gallery>
+            {
+                new Gallery() {GalleryId = 1, GalleryFileName="IMG-20210304-WA0000.jpg", NewsId = 1},
+                new Gallery() {GalleryId = 1, GalleryFileName="IMG-20210304-WA0001.jpg", NewsId = 1},
+                new Gallery() {GalleryId = 1, GalleryFileName="IMG-20210304-WA0002.jpg", NewsId = 1},
+                 new Gallery() {GalleryId = 1, GalleryFileName="IMG-20210304-WA0000.jpg", NewsId = 1},
+                new Gallery() {GalleryId = 1, GalleryFileName="IMG-20210304-WA0001.jpg", NewsId = 1},
+                new Gallery() {GalleryId = 1, GalleryFileName="IMG-20210304-WA0002.jpg", NewsId = 1},
+                 new Gallery() {GalleryId = 1, GalleryFileName="IMG-20210304-WA0000.jpg", NewsId = 1},
+                new Gallery() {GalleryId = 1, GalleryFileName="IMG-20210304-WA0001.jpg", NewsId = 1},
+                new Gallery() {GalleryId = 1, GalleryFileName="IMG-20210304-WA0002.jpg", NewsId = 1},
+                 new Gallery() {GalleryId = 1, GalleryFileName="IMG-20210304-WA0000.jpg", NewsId = 1},
+                new Gallery() {GalleryId = 1, GalleryFileName="IMG-20210304-WA0001.jpg", NewsId = 1},
+                new Gallery() {GalleryId = 1, GalleryFileName="IMG-20210304-WA0002.jpg", NewsId = 1},
+                 new Gallery() {GalleryId = 1, GalleryFileName="IMG-20210304-WA0000.jpg", NewsId = 1},
+                new Gallery() {GalleryId = 1, GalleryFileName="IMG-20210304-WA0001.jpg", NewsId = 1},
+                new Gallery() {GalleryId = 1, GalleryFileName="IMG-20210304-WA0002.jpg", NewsId = 1},
+                 new Gallery() {GalleryId = 1, GalleryFileName="IMG-20210304-WA0000.jpg", NewsId = 1},
+                new Gallery() {GalleryId = 1, GalleryFileName="IMG-20210304-WA0001.jpg", NewsId = 1},
+                new Gallery() {GalleryId = 1, GalleryFileName="IMG-20210304-WA0002.jpg", NewsId = 1},
+                 new Gallery() {GalleryId = 1, GalleryFileName="IMG-20210304-WA0000.jpg", NewsId = 1},
+                new Gallery() {GalleryId = 1, GalleryFileName="IMG-20210304-WA0001.jpg", NewsId = 1},
+                new Gallery() {GalleryId = 1, GalleryFileName="IMG-20210304-WA0002.jpg", NewsId = 1},
+                 new Gallery() {GalleryId = 1, GalleryFileName="IMG-20210304-WA0000.jpg", NewsId = 1},
+                new Gallery() {GalleryId = 1, GalleryFileName="IMG-20210304-WA0001.jpg", NewsId = 1},
+                new Gallery() {GalleryId = 1, GalleryFileName="IMG-20210304-WA0002.jpg", NewsId = 1},
+                 new Gallery() {GalleryId = 1, GalleryFileName="IMG-20210304-WA0000.jpg", NewsId = 1},
+                new Gallery() {GalleryId = 1, GalleryFileName="IMG-20210304-WA0001.jpg", NewsId = 1},
+                new Gallery() {GalleryId = 1, GalleryFileName="IMG-20210304-WA0002.jpg", NewsId = 1},
+                 new Gallery() {GalleryId = 1, GalleryFileName="IMG-20210304-WA0000.jpg", NewsId = 1},
+                new Gallery() {GalleryId = 1, GalleryFileName="IMG-20210304-WA0001.jpg", NewsId = 1},
+                new Gallery() {GalleryId = 1, GalleryFileName="IMG-20210304-WA0002.jpg", NewsId = 1},
+
+                new Gallery() {GalleryId = 2, GalleryFileName="IMG-20210304-WA0000.jpg", NewsId = 2},
+                new Gallery() {GalleryId = 2, GalleryFileName="IMG-20210304-WA0003.jpg", NewsId = 2},
+                new Gallery() {GalleryId = 2, GalleryFileName="IMG-20210304-WA0004.jpg", NewsId = 2},
+
+                new Gallery() {GalleryId = 3, GalleryFileName="IMG-20210304-WA0005.jpg", NewsId = 3},
+                new Gallery() {GalleryId = 3, GalleryFileName="IMG-20210304-WA0006.jpg", NewsId = 3},
+                new Gallery() {GalleryId = 3, GalleryFileName="IMG-20210304-WA0008.jpg", NewsId = 3},
+
+                new Gallery() {GalleryId = 4, GalleryFileName="IMG-20210304-WA0007.jpg", NewsId = 4},
+                new Gallery() {GalleryId = 4, GalleryFileName="IMG-20210304-WA0008.jpg", NewsId = 4},
+                new Gallery() {GalleryId = 4, GalleryFileName="IMG-20210304-WA0002.jpg", NewsId = 4},
+
+                new Gallery() {GalleryId = 5, GalleryFileName="IMG-20210304-WA0002.jpg", NewsId = 5},
+                new Gallery() {GalleryId = 5, GalleryFileName="IMG-20210304-WA0004.jpg", NewsId = 5},
+                new Gallery() {GalleryId = 5, GalleryFileName="IMG-20210304-WA0006.jpg", NewsId = 5},
+
+                new Gallery() {GalleryId = 6, GalleryFileName="IMG-20210304-WA0000.jpg", NewsId = 6},
+                new Gallery() {GalleryId = 6, GalleryFileName="IMG-20210304-WA0001.jpg", NewsId = 6},
+                new Gallery() {GalleryId = 6, GalleryFileName="IMG-20210304-WA0002.jpg", NewsId = 6},
+
+                new Gallery() {GalleryId = 7, GalleryFileName="IMG-20210304-WA0000.jpg", NewsId = 7},
+                new Gallery() {GalleryId = 7, GalleryFileName="IMG-20210304-WA0003.jpg", NewsId = 7},
+                new Gallery() {GalleryId = 7, GalleryFileName="IMG-20210304-WA0004.jpg", NewsId = 7},
+
+                new Gallery() {GalleryId = 8, GalleryFileName="IMG-20210304-WA0005.jpg", NewsId = 8},
+                new Gallery() {GalleryId = 8, GalleryFileName="IMG-20210304-WA0006.jpg", NewsId = 8},
+                new Gallery() {GalleryId = 8, GalleryFileName="IMG-20210304-WA0008.jpg", NewsId = 8},
+
+                new Gallery() {GalleryId = 9, GalleryFileName="IMG-20210304-WA0007.jpg", NewsId = 9},
+                new Gallery() {GalleryId = 9, GalleryFileName="IMG-20210304-WA0008.jpg", NewsId = 9},
+                new Gallery() {GalleryId = 9, GalleryFileName="IMG-20210304-WA0002.jpg", NewsId = 9}
+            };
+
+            gallery.ForEach(g => context.DbGallery.Add(g));
             context.SaveChanges();
         }
     }

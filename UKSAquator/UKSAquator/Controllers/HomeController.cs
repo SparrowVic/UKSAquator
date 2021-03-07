@@ -26,9 +26,20 @@ namespace UKSAquator.Controllers
             return View(vm);
         }
 
-        public ActionResult Gallery()
+        public ActionResult Gallery(int id)
         {
-            return View();
+            var galleries = db.DbGallery.Where(a => a.NewsId == id).ToList();
+
+            var vm = new HomeViewModel()
+            {
+                Galleries = galleries
+            };
+
+            return View(vm);
+
+            //var news = db.DbGallery.Find(id);
+
+            //return View(news);
         }
 
         public ActionResult StaticContent(string viewname)

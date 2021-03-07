@@ -9,5 +9,7 @@ namespace UKSAquator.ViewModels
     public class HomeViewModel
     {
         public IEnumerable<News> News { get; set; }
+        public IEnumerable<Gallery> Galleries { get; set; }
+
     }
 }

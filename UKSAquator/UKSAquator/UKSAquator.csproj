@@ -201,7 +201,12 @@
     <Compile Include="Migrations\202103071244175_InitialCreate.designer.cs">
       <DependentUpon>202103071244175_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202103072017508_AddedGallery.cs" />
+    <Compile Include="Migrations\202103072017508_AddedGallery.designer.cs">
+      <DependentUpon>202103072017508_AddedGallery.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Gallery.cs" />
     <Compile Include="Models\News.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
@@ -237,6 +242,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202103071244175_InitialCreate.resx">
       <DependentUpon>202103071244175_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103072017508_AddedGallery.resx">
+      <DependentUpon>202103072017508_AddedGallery.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
