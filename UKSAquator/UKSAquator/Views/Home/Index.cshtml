@@ -1,0 +1,169 @@
+﻿@model UKSAquator.ViewModels.HomeViewModel
+
+@{
+    ViewBag.Title = "Witaj w UKS Aquator";
+}
+
+<main>
+    <section class="main-gallery-section">
+
+        <img src="../Content/Images/cristian-palmer-XexawgzYOBc-unsplash.jpg" />
+
+    </section>
+
+    <section class="aboutus-section" id="aboutus-section">
+        <h1><b>O NAS</b></h1>
+        <div>
+            Ut arcu enim, dictum quis ultrices id, sagittis eget nulla sed nunc mi, congue ut ultricies ac, varius a eros donec porttitor, libero fermentum fringilla laoreet, eros arcu sodales ante, ut dictum risus lectus vel quam integer ultricies, nunc eget elementum euismod, orci enim vestibulum orci, nec suscipit urna odio et tellus suspendisse suscipit orci sit amet sem venenatis nec lobortis sem suscipit nullam nec imperdiet velit mauris eu nisi a felis imperdiet porta at ac nulla vivamus faucibus felis nec dolor pretium eget pellentesque dolor suscipit maecenas vitae enim arcu.
+
+        </div>
+    </section>
+
+    <section class="news-section">
+        <h1 href="">
+            <b>AKTUALNOŚCI</b>
+        </h1>
+        <div class="news-space">
+
+            @foreach (var news in Model.News)
+            {
+                <div class="news-item">
+                    <img src="../Content/Images/team/@news.CoverFileName" />
+                    <div class="date-space">
+                        <label>@news.PublicationDate</label>
+                    </div>
+                    <div class="title-space">
+                        <label><b>@news.NewsTitle</b></label>
+                    </div>
+                    <div class="localization-space">
+                        <label>@news.CityEvent, @news.CountryEvent</label>
+                    </div>
+                    <p>
+                        @news.Description
+                    </p>
+                    <a class="news-details-button" href="@Url.Action("Details", "News", new { id = news.NewsId })">
+                        Czytaj...
+                    </a>
+                </div>
+            }
+
+        </div>
+    </section>
+
+    <section class="team-section" id="team-section">
+        <h1 href="" class="team-section-title">
+            <b>NASZ TEAM</b>
+        </h1>
+        <div class="team-section-info">
+            Placerat suscipit, orci nisl iaculis eros, a tincidunt nisi odio eget lorem nulla condimentum tempor mattis ut vitae feugiat augue cras ut metus a risus iaculis scelerisque eu ac ante fusce non varius purus aenean nec magna felis fusce vestibulum velit mollis odio sollicitudin lacinia aliquam posuere, sapien elementum lobortis tincidunt, turpis dui ornare nisl, sollicitudin interdum turpis nunc eget.
+        </div>
+        <div class="team-section-details">
+            <div class="team-member">
+                <img src="../Content/Images/faces/Filip.png" />
+                <div class="member-personal-data">
+                    <label class="member-personal-data-name">Filip Chrapek</label>
+                    <label class="member-personal-data-role">Trener</label>
+                </div>
+                <div class="team-member-details">
+                    Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                </div>
+                <div class="member-contact">
+                    <label>trener1@example.com</label>
+                    <a href="">
+                    </a>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="../Content/Images/faces/Radek.png" />
+                <div class="member-personal-data">
+                    <label class="member-personal-data-name">Radosław Gola</label>
+                    <label class="member-personal-data-role">Trener/Założyciel klubu</label>
+                </div>
+                <div class="team-member-details">
+                    Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                </div>
+                <div class="member-contact">
+                    <label>ceo-pl@example.com</label>
+                    <a href="">
+                    </a>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="../Content/Images/faces/Wiktoria.png" />
+                <div class="member-personal-data">
+                    <label class="member-personal-data-name">Wiktoria Wróbel</label>
+                    <label class="member-personal-data-role">Trener</label>
+                </div>
+                <div class="team-member-details">
+                    Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                </div>
+                <div class="member-contact">
+                    <label>trener2@example.com</label>
+                    <a href="">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-section-details-2">
+            <div class="team-section-info-2">
+                Placerat suscipit, orci nisl iaculis eros, a tincidunt nisi odio eget lorem nulla condimentum tempor mattis ut vitae feugiat augue cras ut metus a risus iaculis scelerisque eu ac ante fusce non varius purus aenean nec magna felis fusce vestibulum velit mollis odio sollicitudin lacinia aliquam posuere, sapien elementum lobortis tincidunt, turpis dui ornare nisl, sollicitudin interdum turpis nunc eget.
+            </div>
+            <div class="team-member-2">
+                <img src="../Content/Images/team/IMG-20210304-WA0001.jpg" class="hover-shadow" />
+                <img src="../Content/Images/team/IMG-20210304-WA0002.jpg" class="hover-shadow" />
+                <img src="../Content/Images/team/IMG-20210304-WA0007.jpg" class="hover-shadow" />
+
+                <img src="../Content/Images/team/IMG-20210304-WA0003.jpg" class="hover-shadow" />
+                <img src="../Content/Images/team/IMG-20210304-WA0000.jpg" class="hover-shadow" />
+                <img src="../Content/Images/team/IMG-20210304-WA0005.jpg" class="hover-shadow" />
+
+                <img src="../Content/Images/team/IMG-20210304-WA0006.jpg" class="hover-shadow" />
+                <img src="../Content/Images/team/IMG-20210304-WA0007.jpg" class="hover-shadow" />
+                <img src="../Content/Images/team/IMG-20210304-WA0008.jpg" class="hover-shadow" />
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact-section">
+        <h1 class="contact-section-title"><b>KONTAKT</b></h1>
+        <div class="contact-section-info">
+            <div class="contact-section-border">
+                <div class="map-info">
+                    <div id="google-map-container" class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9774.922814549878!2d21.000812554596006!3d52.23011023997716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc8c92692e49%3A0xc2e97ae5311f2dc2!2sPa%C5%82ac%20Kultury%20i%20Nauki!5e0!3m2!1spl!2spl!4v1606653502183!5m2!1spl!2spl" allowfullscreen="true"></iframe>
+                    </div>
+                </div>
+
+
+                <div class="contact-form">
+                    <h1>Formularz kontaktowy</h1>
+                    <form>
+                        <div class="personal-data">
+                            <label class="label-firstname-class" for="firstname">Imię: </label>
+                            <input class="input-firstname-class" type="text" name="firstname" id="firstname" />
+
+                            <label class="label-lastname-class" for="lastname">Nazwisko:</label>
+                            <input class="input-lastname-class" type="text" name="lastname" id="lastname" />
+                        </div>
+
+                        <label for="email">Adres e-mail:</label>
+                        <input type="email" name="email" id="email" />
+
+                        <label for="phone">Numer kontaktowy:</label>
+                        <input type="text" name="phone" id="phone" />
+
+                        <label>Wiadomość:</label>
+                        <textarea name="message" id="message"></textarea>
+
+                        <input type="submit" value="Wyślij" class="contact-form-button" />
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>

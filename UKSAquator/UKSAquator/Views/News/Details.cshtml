@@ -1,0 +1,33 @@
+﻿@model UKSAquator.Models.News
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_SportsClubLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<main>
+    <div class="news-details-container">
+        <div class="news-details-info">
+            <div class="title-space">
+                <h1>@Model.NewsTitle</h1>
+            </div>
+            <div class="img-space">
+                <img src="~/Content/Images/team/@Model.CoverFileName" />
+            </div>
+            <div class="date-loc-space">
+                <div class="date-space">
+                    <label>@Model.PublicationDate</label>
+                </div>
+                <div class="loc-space">
+                    <label>@Model.CityEvent, @Model.CountryEvent</label>
+                </div>
+            </div>
+            <div>
+                @Model.Description
+                <br />
+            </div>
+        </div>
+    </div>
+</main>

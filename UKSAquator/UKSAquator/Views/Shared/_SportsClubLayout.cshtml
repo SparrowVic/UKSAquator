@@ -1,45 +1,52 @@
-﻿<!DOCTYPE html>
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
 <html>
 <head>
-    <link href="../../Content/Site-prototype.css" rel="stylesheet" type="text/css"/>
     <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site-prototype.css")" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <header>
         <nav class="navigate">
             <ul>
                 <li class="li-aquator-logo">
-                    <a href="../Main.html" class="aquator-logo">
-                        <img src="../../Content/Images/aquator-logo-v3.png" />
+                    <a href="@Url.Content("~/")" class="aquator-logo">
+                        <img src="@Url.Content("~/Content/Images/aquator-logo-v3.png")" />
                     </a>
                 </li>
                 <li>
-                    <a class="nav-hover" href="../Main.html#contact-section">
+                    <a class="nav-hover" href="@Url.Action("Index", "Home")#contact-section">
                         Kontakt
                     </a>
                 </li>
                 <li>
-                    <a class="nav-hover" href="Gallery.html">
+                    <a class="nav-hover" href="@Url.Action("Gallery", "Home")">
                         Galeria
                     </a>
                 </li>
                 <li>
-                    <a class="nav-hover" href="../Main.html#team-section">
+                    <a class="nav-hover" href="@Url.Action("Index", "Home")#team-section">
                         Nasz Team
                     </a>
                 </li>
                 <li>
-                    <a class="nav-hover" href="News.html">
+                    <a class="nav-hover" href="@Url.Action("List", "News")">
                         Aktualności
                     </a>
                 </li>
                 <li>
-                    <a class="nav-hover" href="../Main.html#aboutus-section">
+                    <a class="nav-hover" href="@Url.Action("Index", "Home")#aboutus-section">
                         O nas
                     </a>
                 </li>
                 <li>
-                    <a class="nav-hover" href="../Main.html">
+                    <a class="nav-hover" href="@Url.Action("Index", "Home")">
                         Strona główna
                     </a>
                 </li>
@@ -47,26 +54,12 @@
         </nav>
     </header>
 
-
-
-    <main>
-        <div class="gallery-container">
-            <div class="event-gallery">
-                <div>Date</div>
-                <div>Title</div>
-                <div class="event-description">Event description</div>
-                <div class="event-gallery-images">
-                    Gallery
-                </div>
-                <div class="event-gallery-border">Event gallery border</div>
-            </div>
-        </div>
-    </main>
-
-
+    <div>
+        @RenderBody()
+    </div>
 
     <footer>
-        <section class="footer-second-section">
+        <section class="footer-first-section">
             <div class="footer-details">
                 <div class="about-us-footer">
                     <div class="logo-text-menu">
@@ -85,7 +78,7 @@
                         <a href="">Przypomnij hasło</a>
                     </div>
                 </div>
-                <div class="product-footer">
+                <div class="news-footer">
                     <div>
                         <label>Aktualności</label>
                         <a href="">Blog</a>
@@ -103,11 +96,13 @@
             </div>
         </section>
 
-        <section class="footer-third-section">
+        <section class="footer-second-section">
             <a href="">
-                @created by Wiktor Wróbel
+                @@created by Wiktor Wróbel
             </a>
         </section>
     </footer>
+
+    @RenderSection("ScriptsBottom", required: false)
 </body>
 </html>
