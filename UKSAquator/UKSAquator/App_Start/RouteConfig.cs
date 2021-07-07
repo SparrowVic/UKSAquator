@@ -26,9 +26,33 @@ namespace UKSAquator
             );
 
             routes.MapRoute(
-                name: "Gallery",
+                name: "Dashboard",
+                url: "admin",
+                defaults: new { controller = "Dashboard", action = "Dashboard" }
+            );
+
+            routes.MapRoute(
+                name: "NewsListDashboard",
+                url: "admin/news",
+                defaults: new { controller = "Dashboard", action = "NewsList" }
+            );
+
+            routes.MapRoute(
+                name: "AddNewsDashboard",
+                url: "admin/news/add",
+                defaults: new { controller = "Dashboard", action = "AddNews" }
+            );
+
+            // routes.MapRoute(
+            //    name: "Gallery",
+            //    url: "galeria",
+            //    defaults: new { controller = "Home", action = "Gallery" }
+            //);
+
+            routes.MapRoute(
+                name: "GalleryDetails",
                 url: "galeria-{id}.html",
-                defaults: new { controller = "Home", action = "Gallery" }
+                defaults: new { controller = "Home", action = "GalleryDetails" }
             );
 
             routes.MapRoute(

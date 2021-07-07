@@ -1,4 +1,5 @@
 ﻿@model UKSAquator.ViewModels.HomeViewModel
+@using System.Text.RegularExpressions;
 
 @{
     ViewBag.Title = "Witaj w UKS Aquator";
@@ -39,7 +40,7 @@
                         <label>@news.CityEvent, @news.CountryEvent</label>
                     </div>
                     <p>
-                        @news.Description
+                        @Regex.Match(news.Description, ".{0,200}")...
                     </p>
                     <a class="news-details-button" href="@Url.Action("Details", "News", new { id = news.NewsId })">
                         Czytaj...
@@ -140,21 +141,21 @@
                     <h1>Formularz kontaktowy</h1>
                     <form>
                         <div class="personal-data">
-                            <label class="label-firstname-class" for="firstname">Imię: </label>
-                            <input class="input-firstname-class" type="text" name="firstname" id="firstname" />
+                            <label class="label-firstname-class" for="firstname"></label>
+                            <input class="input-firstname-class" type="text" name="firstname" id="firstname" placeholder="Imię"/>
 
-                            <label class="label-lastname-class" for="lastname">Nazwisko:</label>
-                            <input class="input-lastname-class" type="text" name="lastname" id="lastname" />
+                            <label class="label-lastname-class" for="lastname"></label>
+                            <input class="input-lastname-class" type="text" name="lastname" id="lastname" placeholder="Nazwisko"/>
                         </div>
 
-                        <label for="email">Adres e-mail:</label>
-                        <input type="email" name="email" id="email" />
+                        <label for="email"></label>
+                        <input type="email" name="email" id="email" placeholder="E-mail"/>
 
-                        <label for="phone">Numer kontaktowy:</label>
-                        <input type="text" name="phone" id="phone" />
+                        <label for="phone"></label>
+                        <input type="text" name="phone" id="phone" placeholder="Numer kontaktowy"/>
 
-                        <label>Wiadomość:</label>
-                        <textarea name="message" id="message"></textarea>
+                        <label></label>
+                        <textarea name="message" id="message" placeholder="Wiadomość"></textarea>
 
                         <input type="submit" value="Wyślij" class="contact-form-button" />
 

@@ -26,7 +26,19 @@ namespace UKSAquator.Controllers
             return View(vm);
         }
 
-        public ActionResult Gallery(int id)
+        //public ActionResult Gallery()
+        //{
+        //    var gal = db.DbGallery.ToList();
+
+        //    var vm = new HomeViewModel()
+        //    {
+        //        Galleries = gal
+        //    };
+
+        //    return View(vm);
+        //}
+
+        public ActionResult GalleryDetails(int id)
         {
             var galleries = db.DbGallery.Where(a => a.NewsId == id).ToList();
 
@@ -36,15 +48,11 @@ namespace UKSAquator.Controllers
             };
 
             return View(vm);
-
-            //var news = db.DbGallery.Find(id);
-
-            //return View(news);
         }
 
-        public ActionResult StaticContent(string viewname)
+       /* public ActionResult StaticContent(string viewname)
         {
             return View(viewname);
-        }
+        }*/
     }
 }

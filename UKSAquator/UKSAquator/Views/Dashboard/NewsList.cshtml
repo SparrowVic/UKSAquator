@@ -1,0 +1,36 @@
+﻿@model UKSAquator.ViewModels.HomeViewModel
+
+@{
+    ViewBag.Title = "NewsList";
+    Layout = "~/Views/Shared/_SportsClubLayout.cshtml";
+}
+
+<main>
+
+    <div>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Foto</th>
+                <th>Tytuł</th>
+                <th>Data publikacji</th>
+                <th>Opublikował</th>
+                <th>Ukryte</th>
+            </tr>
+            @foreach (var news in Model.News)
+            {
+                <tr>
+                    <td>@news.NewsId</td>
+                    <td>@news.CoverFileName</td>
+                    <td>@news.NewsTitle</td>
+                    <td>@news.PublicationDate</td>
+                    <td>@news.CityEvent</td>
+                    <td>@news.IsHidden</td>
+                </tr>
+            }
+        </table>
+    </div>
+
+</main>
+
+

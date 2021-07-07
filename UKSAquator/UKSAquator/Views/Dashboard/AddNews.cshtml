@@ -1,0 +1,92 @@
+﻿@model UKSAquator.ViewModels.EditNewsViewModel
+@{
+    ViewBag.Title = "AddNews";
+    Layout = "~/Views/Shared/_SportsClubLayout.cshtml";
+}
+
+<h2>AddNews</h2>
+
+<h2>Edycja lub dodawanie postu</h2>
+
+<div style="margin-top:200px;">
+    @if (Model.ConfirmSuccess.HasValue && Model.ConfirmSuccess.Value)
+    {
+        <div style="text-align: center; margin: 50px;">
+            Pomyślnie wprowadzono zmiany!
+        </div>
+    }
+
+
+    @using (Html.BeginForm("AddNews", "Dashboard", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div>
+            @Html.ValidationSummary()
+        </div>
+
+        <div style="text-align: center;">
+            <table>
+                <tr>
+                    <td>@Html.LabelFor(o => o.News.NewsTitle)</td>
+                    <td>@Html.TextBoxFor(o => o.News.NewsTitle)</td>
+                    <td>@Html.ValidationMessageFor(o => o.News.NewsTitle)</td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(o => o.News.IsHidden)</td>
+                    <td>@Html.TextBoxFor(o => o.News.IsHidden)</td>
+                    <td>@Html.ValidationMessageFor(o => o.News.IsHidden)</td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(o => o.News.CityEvent)</td>
+                    <td>@Html.TextBoxFor(o => o.News.CityEvent)</td>
+                    <td>@Html.ValidationMessageFor(o => o.News.CityEvent)</td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(o => o.News.CountryEvent)</td>
+                    <td>@Html.TextBoxFor(o => o.News.CountryEvent)</td>
+                    <td>@Html.ValidationMessageFor(o => o.News.CountryEvent)</td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(o => o.News.Description)</td>
+                    <td>@Html.TextAreaFor(o => o.News.Description)</td>
+                    <td>@Html.ValidationMessageFor(o => o.News.Description)</td>
+                </tr>
+                @*<tr>
+                    <td>@Html.LabelFor(o => o.News.StartDateEvent)</td>
+                    <td>@Html.TextBoxFor(o => o.News.StartDateEvent)</td>
+                    <td>@Html.ValidationMessageFor(o => o.News.StartDateEvent)</td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(o => o.News.EndDateEvent)</td>
+                    <td>@Html.TextBoxFor(o => o.News.EndDateEvent)</td>
+                    <td>@Html.ValidationMessageFor(o => o.News.EndDateEvent)</td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(o => o.News.PublicationDate)</td>
+                    <td>@Html.TextBoxFor(o => o.News.PublicationDate)</td>
+                    <td>@Html.ValidationMessageFor(o => o.News.PublicationDate)</td>
+                </tr>*@
+
+                @if (ViewBag.EditMode == null || !ViewBag.EditMode)
+                {
+                    <tr>
+                        <td colspan="3">
+
+                            <input type="file" name="file" />
+
+                        </td>
+                    </tr>
+                }
+
+                <tr>
+                    <td style="text-align: right;">
+
+                        <input type="submit" value="Zapisz" class="submitLink" style="height: 40px; margin-right: 0px; margin-top: 30px;" />
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+    }
+</div>

@@ -1,0 +1,22 @@
+﻿@model UKSAquator.ViewModels.HomeViewModel
+
+@{
+    Layout = "~/Views/Shared/_SportsClubLayout.cshtml";
+}
+
+
+<main>
+     
+    @*<div class="return-btn">  
+        <a href="">Powrót</a>
+    </div>*@
+    
+    <div class="gallery-container">
+        @foreach (var gal in Model.Galleries)
+        {
+            <div class="gallery-item">
+                <img src="~/Content/Images/team/@gal.GalleryFileName" />
+            </div>
+        }
+    </div>
+</main>

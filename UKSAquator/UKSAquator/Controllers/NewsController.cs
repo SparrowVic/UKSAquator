@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using UKSAquator.DAL;
+using UKSAquator.ViewModels;
 
 namespace UKSAquator.Controllers
 {
@@ -26,7 +27,14 @@ namespace UKSAquator.Controllers
 
         public ActionResult List()
         {
-            return View();
+            var news = db.DbNews.Where(a => !a.IsHidden).OrderByDescending(a => a.PublicationDate).ToList();
+
+            var vm = new HomeViewModel()
+            {
+                News = news
+            };
+
+            return View(vm);
         }
     }
 }

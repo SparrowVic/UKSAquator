@@ -442,10 +442,11 @@ nav ul li a{
     width: auto;
 }
 
-form input, textarea{
-    border-radius: 5px;
-    border: solid 1px #ccc;
-    background-color: aliceblue;
+form input, textarea {
+    
+    border: none;
+    border-bottom: solid 2px;
+    outline: none;
 }
 
 .contact-form-button {
@@ -561,6 +562,76 @@ form input, textarea{
 
 
 
+
+
+
+/*-----------GALLERY DETAILS PAGE----------*/
+
+.gallery-container{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    padding: 5px;
+}
+
+.gallery-item{
+    height: auto;
+    width: 100%;
+    padding: 5px;
+}
+
+.gallery-container img {
+    height: auto;
+    width: 100%;
+}
+
+/*.return-btn {
+    width: 200px;
+    padding-top: 5px;
+}
+
+.return-btn a{
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    display: grid;
+    text-align: center;
+    padding: 0.8rem;
+    font-size: 20px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.return-btn a:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+}*/
+
+
+
+
+
+
+/*-----------DASHBOARD PAGE-------*/
+
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    text-align: center;
+}
+
+.dashboard-item {
+    padding: 3rem;
+    background-color: black;
+    margin: 0.5rem;
+    border-radius: 5px;
+}
+
+.dashboard-item a{
+    color: white;
+}
 
 
 
@@ -831,81 +902,3 @@ footer {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*---------------GALLERY---------------*/
-
-.embed img {
-    block-size: auto;
-    max-inline-size: 100%;
-    vertical-align: middle;
-}
-
-/* Embed */
-
-.embed {
-    overflow: hidden;
-    padding-block-start: 100%;
-    position: relative;
-}
-
-.embed--1-2 {
-    padding-top: calc(100% / (1 / 2));
-}
-
-.embed--2-1 {
-    padding-top: calc(100% / (2 / 1));
-}
-
-.embed--2-3 {
-    padding-top: calc(100% / (2 / 3));
-}
-
-.embed > * {
-    height: 100%;
-    left: 0;
-    object-fit: cover;
-    padding: 0.25em;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-
-/* Gallery  */
-
-.event-gallery {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-}
-
-.gallery__item--h-2 {
-    grid-column-end: span 2;
-}
-
-.gallery__item--h-3 {
-    grid-column-end: span 3;
-}
-
-.gallery__item--v-2 {
-    grid-row-end: span 2;
-}
-
-.gallery__item--v-3 {
-    grid-row-end: span 3;
-}
